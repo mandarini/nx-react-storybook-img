@@ -1,4 +1,4 @@
-import s from './Uikit.module.scss'; // modified
+import s from './uikit.module.scss';
 import { FC } from 'react';
 
 export interface UikitProps {
@@ -8,7 +8,8 @@ export interface UikitProps {
 export const Uikit: FC<UikitProps> = ({ name }) => {
   return (
     <div className={s['background']}>
-      <h1>Welcome to Uikit! {name}</h1>
+      <h1>Welcome {name} to my UI Kit</h1>
+      <p className={s['red-letters']}>I am red!!!</p>
     </div>
   );
 };
