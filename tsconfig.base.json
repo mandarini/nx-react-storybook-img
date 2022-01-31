@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@st-react/second": ["libs/second/src/index.js"],
+      "@st-react/third": ["libs/third/src/index.ts"],
       "@st-react/uikit": ["libs/uikit/src/index.ts"]
     }
   },
