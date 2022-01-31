@@ -1,0 +1,28 @@
+{
+  "root": "apps/webr-e2e",
+  "sourceRoot": "apps/webr-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/webr-e2e/cypress.json",
+        "devServerTarget": "webr:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "webr:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/webr-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["webr"]
+}
