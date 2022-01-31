@@ -1,0 +1,28 @@
+{
+  "root": "apps/second-e2e",
+  "sourceRoot": "apps/second-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/second-e2e/cypress.json",
+        "devServerTarget": "second:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "second:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/second-e2e/**/*.js"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["second"]
+}

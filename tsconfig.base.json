@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@st-react/second": ["libs/second/src/index.js"],
       "@st-react/uikit": ["libs/uikit/src/index.ts"]
     }
   },
