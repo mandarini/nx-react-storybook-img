@@ -1,0 +1,28 @@
+{
+  "root": "apps/fourth-e2e",
+  "sourceRoot": "apps/fourth-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/fourth-e2e/cypress.json",
+        "devServerTarget": "fourth:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "fourth:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/fourth-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["fourth"]
+}

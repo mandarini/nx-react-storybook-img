@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "fourth": "libs/fourth",
+    "fourth-e2e": "apps/fourth-e2e",
     "second": "libs/second",
     "second-e2e": "apps/second-e2e",
     "third": "libs/third",
