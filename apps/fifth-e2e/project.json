@@ -1,0 +1,28 @@
+{
+  "root": "apps/fifth-e2e",
+  "sourceRoot": "apps/fifth-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/fifth-e2e/cypress.json",
+        "devServerTarget": "fifth:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "fifth:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/fifth-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["fifth"]
+}

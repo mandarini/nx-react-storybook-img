@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@st-react/fifth": ["libs/fifth/src/index.ts"],
       "@st-react/fourth": ["libs/fourth/src/index.ts"],
       "@st-react/second": ["libs/second/src/index.js"],
       "@st-react/third": ["libs/third/src/index.ts"],
