@@ -1,0 +1,28 @@
+{
+  "root": "apps/weba-e2e",
+  "sourceRoot": "apps/weba-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/weba-e2e/cypress.json",
+        "devServerTarget": "weba:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "weba:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/weba-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["weba"]
+}
