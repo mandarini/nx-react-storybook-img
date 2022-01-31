@@ -1,9 +1,9 @@
-import './second.module.css';
+import './second.css';
 
 export function Second(props) {
   return (
     <div className="background">
-      <h1>Welcome to Uikit!</h1>
+      <h1>Welcome to Second!</h1>
     </div>
   );
 }
